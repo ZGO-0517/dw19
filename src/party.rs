@@ -24,8 +24,11 @@ impl Member {
 /// assert_eq!(count_alive(&party), 2);
 /// ```
 pub fn count_alive(party: &[Member]) -> usize {
+    if party.is_empty() {
+    	return 0;
+    }
     let mut alive = 0;
-    for i in 0..party.len() - 1 {
+    for i in 0..party.len() {
         if party[i].hp > 0 {
             alive += 1;
         }
