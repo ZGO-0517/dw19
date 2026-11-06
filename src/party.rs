@@ -45,7 +45,7 @@ pub fn count_alive(party: &[Member]) -> usize {
 /// assert_eq!(total_hp(&party), 40);
 /// ```
 pub fn total_hp(party: &[Member]) -> i32 {
-    let mut total = party[0].hp;
+    let mut total = 0;
     for member in party {
         total += member.hp;
     }
