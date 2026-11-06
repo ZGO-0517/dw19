@@ -67,7 +67,7 @@ pub fn healthiest(party: &[Member]) -> Option<&str> {
     }
     let mut best = 0;
     for i in 1..party.len() {
-        if party[i].hp < party[best].hp {
+        if party[i].hp > party[best].hp {
             best = i;
         }
     }
