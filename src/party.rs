@@ -86,7 +86,6 @@ pub fn healthiest(party: &[Member]) -> Option<&str> {
 /// ```
 pub fn heal_all(party: &mut [Member], amount: i32) {
     for i in 0..party.len() {
-        let mut member = party[i].clone();
-        member.hp += amount;
+        party[i].hp += amount;
     }
 }
